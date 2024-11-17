@@ -1,0 +1,171 @@
+
+
+@media (max-width: 768px) {
+    .custom-element {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-element {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+.table {
+    font-family: 'Poppins', sans-serif;
+    size: 1,5rem;
+}
+
+    /* Estilos privados para o conteúdo de detalhes da empresa */
+    #empresa-details {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#empresa-details h2, #empresa-details h4 {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+#empresa-details h2 {
+    font-size: 18pt;
+}
+
+#empresa-details h4 {
+    font-size: 14pt;
+}
+
+#empresa-details .card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#empresa-details .card-body {
+    padding: 15px;
+}
+
+#empresa-details .list-group-item {
+    font-size: 12pt;
+}
+
+#empresa-details .card-body li strong {
+    font-weight: bold;
+}
+
+/* Ajustes para impressão */
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+@media print {
+    #empresa-details {
+        font-size: 10pt;
+        width: 100%;
+        margin: 0;
+    }
+
+    #empresa-details .card {
+        border: none;
+        padding: 10px;
+    }
+
+    #empresa-details .list-group-item {
+        font-size: 10pt;
+        padding: 8px;
+    }
+
+    #empresa-details h2, #empresa-details h4 {
+        page-break-before: always;
+        font-size: 16pt;
+    }
+}
+
+/* Reset de margens e preenchimento */
+body, html {
+    height: 100%;
+    margin: 20;
+
+    padding: 15;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do conteúdo da página */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+.page-container__content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Estilo do footer */
+.page-container__footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Efeito de hover no footer */
+.page-container__footer:hover {
+    background-color: #444;
+    transition: background-color 0.3s;
+}
+
+/* Estilo do copyright */
+.page-container__footer-text {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Link de direitos reservados */
+.page-container__footer-link {
+    color: #ff9d00;
+    text-decoration: none;
+}
+
+.page-container__footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo extra para o dashboard */
+.dashboard-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.approved-card {
+    background-color: #28a745;
+    color: white;
+}
+
+.rejected-card {
+    background-color: #dc3545;
+    color: white;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-counter {
+    font-size: 36px;
+    font-weight: bold;
+}

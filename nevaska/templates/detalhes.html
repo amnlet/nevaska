@@ -1,0 +1,208 @@
+{% extends 'index.html' %} {% block content %} {% if empresa %}
+<div class="container card shadow-sm p-3">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="empresa-details">
+        <h2>Detalhes da Empresa</h2>
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group">
+              {% if empresa.result == NONE %}
+              <li class="list-group-item">
+                <strong>Data do Formulário:</strong> EM ABERTO
+              </li>
+              {% else %}
+              <li class="list-group-item">
+                <strong>Data do Formulário:</strong> {{ empresa.result }}
+              </li>
+              {% endif %}
+              <li class="list-group-item">
+                <strong>Data do Formulário:</strong> {{ empresa.data_form }}
+              </li>
+              <li class="list-group-item">
+                <strong>CNPJ:</strong> {{ empresa.emp_cnpj }}
+              </li>
+              <li class="list-group-item">
+                <strong>Razão Social:</strong> {{ empresa.razao_nome }}
+              </li>
+              <li class="list-group-item">
+                <strong>Nome Fantasia:</strong> {{ empresa.fantasia_nome }}
+              </li>
+              <li class="list-group-item">
+                <strong>Telefone:</strong> {{ empresa.telefone_empresa }}
+              </li>
+              <li class="list-group-item">
+                <strong>CEP:</strong> {{ empresa.cep }}
+              </li>
+              <li class="list-group-item">
+                <strong>Rua:</strong> {{ empresa.rua }}
+              </li>
+              <li class="list-group-item">
+                <strong>Bairro:</strong> {{ empresa.bairro }}
+              </li>
+              <li class="list-group-item">
+                <strong>Cidade:</strong> {{ empresa.cidade }}
+              </li>
+              <li class="list-group-item">
+                <strong>Estado:</strong> {{ empresa.estado }}
+              </li>
+              <li class="list-group-item">
+                <strong>Complemento:</strong> {{ empresa.complemento }}
+              </li>
+              <li class="list-group-item">
+                <strong>Produto Descrição:</strong> {{ empresa.produto_desc }}
+              </li>
+              <li class="list-group-item">
+                <strong>Valor Descrição:</strong> {{ empresa.valor_desc }}
+              </li>
+              <li class="list-group-item">
+                <strong>Prazo Descrição:</strong> {{ empresa.prazo_desc }}
+              </li>
+              <li class="list-group-item">
+                <strong>Composição Empresa:</strong> {{ empresa.comp_emp }}
+              </li>
+              <li class="list-group-item">
+                <strong>Número de Endereço:</strong> {{ empresa.num_endr }}
+              </li>
+              <li class="list-group-item">
+                <strong>E-mail da Empresa:</strong> {{ empresa.email_empresa }}
+              </li>
+              <li class="list-group-item">
+                <strong>Referência Comercial 1:</strong> {{ empresa.referencia1 }} | <strong>Contato 1:</strong> {{ empresa.contato1 }}
+              </li>
+              <li class="list-group-item">
+                <strong>Referência Comercial 2:</strong> {{ empresa.referencia2 }} | <strong>Contato 2:</strong> {{ empresa.contato2 }}
+              </li>
+              <li class="list-group-item">
+                <strong>Referência Comercial 3:</strong> {{ empresa.referencia3 }} | <strong>Contato 3:</strong> {{ empresa.contato3 }}
+              </li>
+              <li class="list-group-item">
+                <strong>Referência Comercial 4:</strong> {{ empresa.referencia4 }} | <strong>Contato 4:</strong> {{ empresa.contato4 }}
+              </li>
+              <li class="list-group-item">
+                <strong>Referência Comercial 5:</strong> {{ empresa.referencia5 }} | <strong>Contato 5:</strong> {{ empresa.contato5 }}
+              </li>
+              <li class="list-group-item">
+                <strong>Arquivos:</strong>
+
+                {% if arquivos %}
+                <div class="row">
+                  {% for arquivo in arquivos %}
+                  <div class="col-md-4 mb-3">
+                    <!-- Card para cada arquivo -->
+                    <div class="card">
+                      <div class="card-body">
+                        <!-- Ícone ou imagem dependendo do tipo de arquivo -->
+                        {% if ".jpg" in arquivo.arquivo.name or ".jpeg" in arquivo.arquivo.name or ".png" in arquivo.arquivo.name %}
+                        <i class="fas fa-image fa-3x mb-2"></i>
+                        <!-- Ícone de imagem -->
+                        {% elif ".pdf" in arquivo.arquivo.name %}
+                        <i class="fas fa-file-pdf fa-3x mb-2"></i>
+                        <!-- Ícone de PDF -->
+                        {% elif ".docx" in arquivo.arquivo.name %}
+                        <i class="fas fa-file-word fa-3x mb-2"></i>
+                        <!-- Ícone de Word -->
+                        {% elif ".xlsx" in arquivo.arquivo.name %}
+                        <i class="fas fa-file-excel fa-3x mb-2"></i>
+                        <!-- Ícone de Excel -->
+                        {% else %}
+                        <i class="fas fa-file fa-3x mb-2"></i>
+                        <!-- Ícone genérico para outros tipos -->
+                        {% endif %}
+
+                        <!-- Nome do arquivo com link -->
+                        <p>
+                          <a
+                            href="{{ arquivo.arquivo.url }}"
+                            target="_blank"
+                            class="card-title"
+                            >{{ arquivo.name }}</a
+                          >
+                          |
+                          <a
+                            href="{% url 'excluir_arquivo' arquivo.id %}"
+                            class="text-danger"
+                            onclick="return confirm('Tem certeza que deseja excluir este arquivo?');"
+                            >Excluir</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                {% else %}
+                <p>Nenhum arquivo carregado.</p>
+                {% endif %}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if request.user.cargos == "SUPERVISOR"%}
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div id="upload-documents">
+        <h4>Situação da analise:</h4>
+        <div class="card">
+          <div class="card-body">
+            <form method="POST" action="{% url 'resultado' empresa.id %}">
+              {% csrf_token %}
+              <label for="result" class="form-label">Alterar:</label>
+              <select name="result" class="form-select">
+                <option value="EM ABERTO">Em Aberto</option>
+                <option value="EM ANALISE">Em Analise</option>
+                <option value="APROVADO">Aprovado</option>
+                <option value="REPROVADO">Reprovado</option>
+              </select>
+              <br />
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="btn btn-primary" type="submit">
+                    Salvar Alterações
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
+
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div id="upload-documents">
+        <h4>Anexar Documento</h4>
+        <div class="card">
+          <div class="card-body">
+            <form
+              method="POST"
+              action="{% url 'detalhes-emp' empresa.id %}"
+              enctype="multipart/form-data"
+            >
+              {% csrf_token %}
+              <div class="form-group">
+                {% if form %} {{ form.as_p }} {% else %}
+                <p>Nenhum formulário disponível</p>
+                {% endif %}
+              </div>
+              <button type="submit" class="btn btn-primary">
+                SALVAR ARQUIVOS
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  {% endif %} {% endblock %}
+</div>

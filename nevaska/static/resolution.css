@@ -1,0 +1,81 @@
+/* CSS para garantir uma boa visualização em monitores de 24" e 19" */
+
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header, .footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section {
+    flex: 1 1 48%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #e6e6e6;
+    border-radius: 8px;
+}
+
+/* Ajustes para monitores menores (19") */
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .section {
+        flex: 1 1 100%;
+        margin: 5px 0;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Ajustes para monitores ainda menores ou tablets */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    .header, .footer {
+        font-size: 14px;
+    }
+}
+
+/* Adaptação para monitores widescreen (24") */
+@media screen and (min-width: 1920px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1600px;
+    }
+
+    .main-content {
+        gap: 20px;
+    }
+}

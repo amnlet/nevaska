@@ -1,0 +1,316 @@
+{% extends 'index.html' %} {% block content %}
+<div class="card shadow-sm p-3">
+  <form method="post" action="{% url 'salvar_cadastro' %}">
+    {% csrf_token %}
+
+    <h1>Cadastro de Clientes</h1>
+    <div class="row">
+      <div class="col-md-5">
+        <label for="data_form" class="form-label">Data: </label>
+        <input
+          type="date"
+          class="form-control"
+          name="data_form"
+          id="data-form"
+          required
+        />
+      </div>
+      <div class="col-md-5">
+        <label for="situacao_cliente" class="form-label">Situação:</label>
+        <select class="form-select" name="situacao_cliente" required>
+          <option value="" selected></option>
+          <option value="Cadastro">Cadastro novo</option>
+          <option value="Recadastro">Renovação de cadastro</option>
+          <option value="Codigo">Código</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="cod_cliente" class="form-label">Cod: </label>
+        <input
+          type="text"
+          class="form-control"
+          name="cod_cliente"
+          placeholder="ex: 1234"
+        />
+      </div>
+    </div>
+    <br />
+
+    <div class="row">
+      <h2>Dados cadastrais:</h2>
+      <div class="col-md-4">
+        <label for="emp-cnpj" class="form-label">CNPJ:</label>
+        <input
+          type="text"
+          id="cnpj"
+          name="emp_cnpj"
+          class="form-control"
+          placeholder="00.000.000/0000-00"
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="emp-cpf" class="form-label">CPF:</label>
+        <input
+          type="text"
+          id="cpf"
+          name="emp_cpf"
+          class="form-control"
+          placeholder="000.000.000-00"
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="emp-ie" class="form-label">IE:</label>
+        <input
+          type="text"
+          id="ie"
+          name="emp_ie"
+          class="form-control"
+          placeholder="000.000"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="tipo_cliente" class="form-label">Tipo:</label>
+        <select name="tipo_cliente" class="form-select" required>
+          <option value="" required></option>
+          <option value="Revenda">Revenda</option>
+          <option value="Consumo">Consumo</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="razao_nome" class="form-label">Razão:</label>
+        <input
+          type="text"
+          id="razaonome"
+          name="razao_nome"
+          class="form-control"
+          placeholder="Razão CNPJ / Nome cliente"
+          required
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="fantasia_nome" class="form-label">Fantasia:</label>
+        <input
+          type="text"
+          id="fantasianome"
+          name="fantasia_nome"
+          class="form-control"
+          placeholder="Fantasia CNPJ"
+        />
+      </div>
+    </div>
+    <br />
+
+    <div class="row">
+      <h2>Endereço:</h2>
+      <div class="col-md-6">
+        <label class="form-label">Rua:</label>
+        <input class="form-control" name="rua" type="text" id="rua" size="60" />
+      </div>
+      <div class="col-md-2">
+        <label class="form-label">Número:</label>
+        <input
+          class="form-control"
+          name="num_endr"
+          type="text"
+          id="num_endr"
+          size="8"
+        />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Complemento:</label>
+        <input
+          class="form-control"
+          name="comp_emp"
+          type="text"
+          id="ibge"
+          size=""
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <label class="form-label">Cep: </label>
+        <input
+          class="form-control"
+          name="cep"
+          type="text"
+          id="cep"
+          value=""
+          size="10"
+          maxlength="9"
+        />
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Bairro:</label>
+        <input
+          class="form-control"
+          name="bairro"
+          type="text"
+          id="bairro"
+          size="40"
+        />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Cidade:</label>
+        <input
+          class="form-control"
+          name="cidade"
+          type="text"
+          id="cidade"
+          size="40"
+        />
+      </div>
+      <div class="col-md-2">
+        <label class="form-label">Estado:</label>
+        <input class="form-control" name="uf" type="text" id="uf" size="2" />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <h2>Contato Empresa:</h2>
+      <div class="col-md-6">
+        <label class="form-label" for="email_empresa"
+          >Endereço Eletrônico:</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          name="email_empresa"
+          placeholder="meuemail@dominio.com"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="telefone_empresa" class="form-label">Telefone:</label>
+        <input
+          type="text"
+          id="emp-contato"
+          class="form-control"
+          name="telefone_empresa"
+        />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <h2>Produtos vendidos:</h2>
+      <div class="col-md-4">
+        <label class="form-label" for="desc-item">Produto:</label>
+        <input
+          class="form-control"
+          type="text"
+          id="produto_desc"
+          name="produto_desc"
+        />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="desc-valor">Valor:</label>
+        <input
+          class="form-control"
+          type="text"
+          id="valor"
+          name="valor_desc"
+          placeholder="R$ 0000,00"
+        />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="desc-prazo">Prazo:</label>
+        <input
+          class="form-control"
+          type="text"
+          id="prazo_desc"
+          name="prazo_desc"
+        />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <h2>Referencias comerciais:</h2>
+      <div class="col-md-6">
+        <label class="form-label">Referencia 1: </label>
+        <input class="form-control" type="text" name="referencia1" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Contato: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="contato"
+          name="contato1"
+          placeholder="(00) 0000-0000"
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Referencia 2: </label>
+        <input class="form-control" type="text" name="referencia2" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Contato: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="contato"
+          name="contato2"
+          placeholder="(00) 0000-0000"
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Referencia 3: </label>
+        <input class="form-control" type="text" name="referencia3" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Contato: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="contato"
+          name="contato3"
+          placeholder="(00) 0000-0000"
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Referencia 4: </label>
+        <input class="form-control" type="text" name="referencia4" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Contato: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="contato"
+          name="contato4"
+          placeholder="(00) 0000-0000"
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Referencia 5: </label>
+        <input class="form-control" type="text" name="referencia5" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="contato5">Contato: </label>
+        <input
+          class="form-control"
+          type="text"
+          id="contato"
+          name="contato5"
+          placeholder="(00) 0000-0000"
+        />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-4">
+        <button class="btn btn-primary" style="width: 250px" type="submit">
+          Salvar cadastro
+        </button>
+      </div>
+    </div>
+  </form>
+  <br />
+</div>
+
+<br />
+<br />
+
+{% endblock %}

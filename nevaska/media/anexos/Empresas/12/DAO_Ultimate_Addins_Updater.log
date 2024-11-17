@@ -1,0 +1,70 @@
+[Friday May 26 20:55:42 2023] -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+[Friday May 26 20:55:42 2023]          Dragon Age Origins Ultimate addins.xml updater ran
+[Friday May 26 20:55:42 2023] -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+[Friday May 26 20:55:42 2023] Checking for successful game login
+[Friday May 26 20:55:42 2023]  auth token found
+[Friday May 26 20:55:42 2023] Command-line Paramters []
+[Friday May 26 20:55:42 2023] AddIns File = [BioWare\Dragon Age\Settings\addins.xml]
+[Friday May 26 20:55:42 2023] Offers File = [BioWare\Dragon Age\Settings\offers.xml]
+[Friday May 26 20:55:42 2023] AddIns Folder = [BioWare\Dragon Age\Settings]
+[Friday May 26 20:55:42 2023] Program Location = [D:\SteamLibrary\steamapps\common\Dragon Age Ultimate Edition]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with addins\dao_prc_ep_1\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_cp_1\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\offers.xml with Offers\dao_prc_ocp_1\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [Offers.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_cp_2\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\offers.xml with Offers\dao_prc_ocp_2\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [Offers.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_cp_3\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_cp_7\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\offers.xml with Offers\dao_prc_ocp_13\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [Offers.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_drk\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_drk_dao\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_drk_ep1\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\offers.xml with Offers\dao_prc_drk_o\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [Offers.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_gib\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_gib_dao\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_gib_ep1\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\offers.xml with Offers\dao_prc_gib_o\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [Offers.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_lel\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_lel_dao\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_lel_ep1\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\offers.xml with Offers\dao_prc_lel_o\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [Offers.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_nrx_1\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\offers.xml with Offers\dao_prc_onrx_1\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [Offers.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_promo_me\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\offers.xml with Offers\DAO_PRC_OPROMO_ME\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [Offers.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_str\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_str_dao\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\addins.xml with Addins\dao_prc_str_ep1\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [AddIns.xml successfully updated.]
+[Friday May 26 20:55:42 2023] Updating C:\Users\Fujioka\Documents\BioWare\Dragon Age\Settings\offers.xml with Offers\dao_prc_str_o\manifest.xml
+[Friday May 26 20:55:42 2023] Results [0] [Offers.xml successfully updated.]
+[Friday May 26 20:55:42 2023] -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+[Friday May 26 20:55:42 2023] |         Dragon Age Origins Ultimate addins.xml finished
+[Friday May 26 20:55:42 2023] -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+

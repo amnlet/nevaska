@@ -1,0 +1,9 @@
+# Ambiente virtual
+env-nevaska/
+
+# Arquivos Python compilados
+*.pyc
+__pycache__/
+
+# Configurações locais
+*.env
